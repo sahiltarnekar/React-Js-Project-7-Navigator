@@ -1,13 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { GrOverview } from "react-icons/gr";
-import { MdDelete } from "react-icons/md";
-import { VscEditorLayout } from "react-icons/vsc";
-import { RiEdit2Fill } from "react-icons/ri";
+
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import { useForm } from "react-hook-form";
-import { Modal } from "bootstrap/dist/js/bootstrap.min";
+
 import Swal from 'sweetalert2'
 import Header from '../Component/Header.jsx'
 import Footer from '../Component/Footer.jsx'
@@ -116,7 +113,7 @@ const Home = () => {
     <>
       <Header/>
 
-      <div className="container p-0">
+      <div className="container p-0 mt-5 mb-5">
         <div className="row">
           <div className="col-12">
             <h1 className="text-center mb-4 gradient-text">Our Products</h1>
