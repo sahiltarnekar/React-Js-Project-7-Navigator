@@ -3,8 +3,7 @@ import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.min.js'
 import './assets/css/styles.css'
-import { lazy } from 'react'
-import Routing from './Layout'
+import Routing from './Routing.jsx'
 import Loading from './Component/Loading.jsx'
 
 const App = () => {
@@ -18,9 +17,9 @@ const App = () => {
         <Suspense fallback={<Loading/>}>
           <Routes>
             {
-              Routing.map((ele,index)=>{
+              Routing.map((ele)=>{
                 const ElementComponent = ele.element;
-                return <Route path={ele.path} element={<ElementComponent/>}/>
+                return <Route key={ele.path} path={ele.path} element={<ElementComponent/>}/>
               })
             }
           </Routes>

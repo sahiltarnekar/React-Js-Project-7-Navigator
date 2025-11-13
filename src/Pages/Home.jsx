@@ -7,6 +7,7 @@ import Swal from 'sweetalert2'
 import Header from '../Component/Header.jsx'
 import Footer from '../Component/Footer.jsx'
 
+
 const Home = () => {
   const navigate = useNavigate();
   const [product, setProduct] = useState([]);
@@ -117,17 +118,24 @@ const Home = () => {
             <h1 className="text-center mb-4 gradient-text">Our Products</h1>
             <div className="d-flex justify-content-between align-items-center mb-4">
               <p className="mb-0 fw-bold">Total Products: {product.length}</p>
+              <div className="btn-group">
+                <Link to="/allProduct" className="btn btn-primary modern-btn pulse-animation">
+            All Products
+          </Link>
               <Link to="addProduct" onClick={handleAddProductClick} className="btn btn-primary modern-btn pulse-animation">
                 Add Product
               </Link>
+              </div>
+              
             </div>
           </div>
         </div>
         
         <div className="row g-4">
-            {product.map((ele,index) => (
+            {product.slice(0,10).map((ele,index) => (
               <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6" key={index}>
                 <div className="card modern-card h-100 shadow-sm">
+               
                   <img 
                     src={ele.image || '/src/assets/images/placeholder.svg'} height={300}
                     alt={ele.product_name || 'Product Image'} 
