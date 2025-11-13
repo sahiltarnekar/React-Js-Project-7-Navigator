@@ -20,7 +20,7 @@ const Footer = () => {
                   className='text-light text-decoration-none fw-bold'
                   rel="noopener noreferrer"
                 >
-                  @mihir vaghela
+                  @sahil tarnekar
                 </a>
               </p>
             </div>

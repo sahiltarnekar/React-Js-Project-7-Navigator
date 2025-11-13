@@ -1,10 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import { useForm } from "react-hook-form";
-
 import Swal from 'sweetalert2'
 import Header from '../Component/Header.jsx'
 import Footer from '../Component/Footer.jsx'
@@ -131,7 +129,7 @@ const Home = () => {
               <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6" key={index}>
                 <div className="card modern-card h-100 shadow-sm">
                   <img 
-                    src={ele.image || '/src/assets/images/placeholder.svg'} 
+                    src={ele.image || '/src/assets/images/placeholder.svg'} height={300}
                     alt={ele.product_name || 'Product Image'} 
                     className="card-img-top product-img"
                     onError={(e) => {
