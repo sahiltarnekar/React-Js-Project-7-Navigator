@@ -133,7 +133,7 @@ const Home = () => {
         
         <div className="row g-4">
             {product.slice(0,10).map((ele,index) => (
-              <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6" key={index}>
+              <div className="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4" key={index}>
                 <div className="card modern-card h-100 shadow-sm">
                
                   <img 
